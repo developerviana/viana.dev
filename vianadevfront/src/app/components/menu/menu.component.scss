@@ -1,0 +1,41 @@
+app-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  width: 100%; 
+}
+
+app-menu ul {
+  display: inline-block;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+app-menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+app-menu li a:hover {
+  border: 1px dashed white;
+}
+
+.botao-contato {
+  border: 2px solid #e91e63;
+  padding: 8px 20px;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background 0.3s;
+}
+
+.botao-contato:hover {
+  background-color: #e91e63;
+  color: white;
+}

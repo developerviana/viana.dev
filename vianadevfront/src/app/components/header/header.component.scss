@@ -1,5 +1,8 @@
 .app-header {
     display: flex;
-    justify-content: left;
     align-items: center;
+    justify-content: space-between; /* isso manda o logo para a esquerda e o menu para a direita */
+    padding: 10px 50px; /* ajuste o espaço interno */
+    background-color: #000; /* preto, igual na sua imagem */
+    height: 120px; 
 }
