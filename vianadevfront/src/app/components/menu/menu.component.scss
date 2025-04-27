@@ -1,41 +1,39 @@
-app-menu {
+.menu ul {
   display: flex;
-  align-items: center;
-  justify-content: center; 
-  width: 100%; 
-}
-
-app-menu ul {
-  display: inline-block;
   list-style: none;
   gap: 30px;
   margin: 0;
   padding: 0;
 }
 
-app-menu li a {
+.menu li a {
+  font-family: Montserrat-alternates, sans-serif;
   color: white;
   text-decoration: none;
   font-weight: bold;
+  font-size: 17px;
   padding: 10px 20px;
   border-radius: 5px;
 }
 
-app-menu li a:hover {
-  border: 1px dashed white;
+.menu li a:hover {
+  text-decoration: underline;
 }
 
-.botao-contato {
-  border: 2px solid #e91e63;
-  padding: 8px 20px;
-  border-radius: 20px;
+
+.contato {
   color: white;
-  font-weight: bold;
-  text-transform: uppercase;
-  transition: background 0.3s;
+  transition: background 0.3s;  
+  background: 
+    linear-gradient(#000, #000) padding-box,
+    linear-gradient(to right, #FF3C57,  #8E0038) border-box;
+  border: 5px solid transparent;
+  border-radius: 50px;
+  
+  color: white;
 }
 
-.botao-contato:hover {
+.contato:hover {
   background-color: #e91e63;
   color: white;
 }

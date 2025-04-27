@@ -5,6 +5,7 @@ import { MenuComponent } from "../menu/menu.component";
 
 @Component({
   selector: 'app-header',
+  standalone: true,
   imports: [
     NgOptimizedImage,
     MenuComponent
