@@ -1,11 +1,10 @@
 <div class="text-amber-50 me-10 ">
 	<ul class="flex tracking-wider space-x-24 font-[Montserrat_Alternates] text-sm font-medium">
-		<li><a href="#sobre" class="hover:text-rose-500 transition duration-200">Sobre</a></li>
-		<li><a href="#skills" class="hover:text-rose-500 transition duration-200">Skills</a></li>
-		<li><a href="#portfolio" class="hover:text-rose-500 transition duration-200 ">Portfólio</a></li>
-		<li>
-			<a href="#contato" 
-			   class="hover:text-orange-700 transition duration-300 rounded-[30px] border-[3px] border-transparent" 
+		<li><a href="#" class="hover:text-rose-500 transition duration-200" (click)="scrollToSection($event, 'Sobre')">Sobre</a></li>
+		<li><a href="#" class="hover:text-rose-500 transition duration-200" (click)="scrollToSection($event, 'Skills')">Skills</a></li>
+		<li><a href="#" class="hover:text-rose-500 transition duration-200" (click)="scrollToSection($event, 'Portfolio')">Portfólio</a></li>
+		<li><a href="#"
+			   class="hover:text-orange-700 transition duration-300 rounded-[30px] border-[3px] border-transparent"
 			   style="
 					background-image: 
 					  linear-gradient(#000, #000), 
@@ -25,21 +24,3 @@
 </div>
 
 
-<section id="sobre">
-	<!-- Conteúdo da seção Sobre -->
-</section>
-
-<!-- Seção Skills -->
-<section id="skills">
-	<!-- Conteúdo da seção Skills -->
-</section>
-
-<!-- Seção Portfólio -->
-<section id="portfolio">
-	<!-- Conteúdo da seção Portfólio -->
-</section>
-
-<!-- Seção Contato -->
-<section id="contato" >
-	<!-- Conteúdo da seção Contato -->
-</section>
