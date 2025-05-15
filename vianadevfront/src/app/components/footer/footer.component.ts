@@ -9,7 +9,9 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
-  scrollToTop(): void {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  scrollToTop(delay: number = 0): void {
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, delay);
   }
 }
