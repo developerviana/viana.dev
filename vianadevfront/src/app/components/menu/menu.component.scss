@@ -1,0 +1,6 @@
+			$border-gradient: linear-gradient(to right, #FF3C57, #8E0038);
+
+			.seu-elemento {
+				border: 4px solid transparent;
+				border-image: $border-gradient 1;
+			}

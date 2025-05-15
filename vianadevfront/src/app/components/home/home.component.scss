@@ -1,0 +1,8 @@
+@keyframes carousel-fade {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(-50%); }
+}
+.animate-carousel-fade {
+	animation: carousel-fade 12s linear infinite;
+	will-change: transform;
+}
