@@ -12,10 +12,3 @@ Este projeto foi gerado com [Angular CLI] versão 19.2.9.
 - Responsividade com Flexbox e Grid
 - Estrutura modular com Lazy Loading
 
-## 🚀 Como rodar localmente
-
-1. **Clone o repositório:**
-
-```bash
-git clone https://github.com/developerviana/viana.dev.git
-cd viana.dev
