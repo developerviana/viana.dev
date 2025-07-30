@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "dist/vianadevfront/server/server.mjs",
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": ["dist/vianadevfront/**"]
+      }
+    },
+    {
+      "src": "dist/vianadevfront/browser/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*\\.(js|css|ico|png|jpg|jpeg|gif|svg|webp|woff|woff2|ttf|eot))",
+      "headers": {
+        "cache-control": "public, max-age=31536000, immutable"
+      },
+      "dest": "/dist/vianadevfront/browser/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/dist/vianadevfront/server/server.mjs"
+    }
+  ],
+  "outputDirectory": "dist/vianadevfront"
+}
