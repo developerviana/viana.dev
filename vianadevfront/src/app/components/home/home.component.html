@@ -1,7 +1,7 @@
 <app-header></app-header>
 <main>
-	<section class="flex h-[80vh] bg-gray-200" alt="Card de Apresentação" id="Sobre">
-		<div class="w-1/2 bg-gray-200 relative flex flex-col justify-center items-center">
+	<section class="flex flex-col sm:flex-row items-center justify-center h-auto min-h-[60vh] bg-gray-200" alt="Card de Apresentação" id="Sobre">
+		<div class="w-full sm:w-1/2 bg-gray-200 flex flex-col justify-center items-center py-8">
 		  <p class="text-xl">Olá, <span class="inline-block animate-wave">👋</span></p>
 		  <h1 class="text-5xl font-bold">Victor Viana</h1>
 		  <p class="text-2x1 font-bold text-gray-500 mt-4">Engenheiro de Software</p>
@@ -31,7 +31,7 @@
 			</div>
 		</div>
 	  
-		<div class="w-1/2 bg-black flex clip-right items-center justify-center flex-col">
+		<div class="hidden sm:flex w-1/2 bg-black clip-right items-center justify-center flex-col">
 			<div id="logo">
 				<img src="/assets/Perfil-B.png" class="w-[50vh] h-[50vh]"/>
 			</div>
@@ -42,28 +42,23 @@
 			Desenvolvedor brasileiro de 24 anos, apaixonado por tecnologia, design e pela resolução de desafios complexos. Desde cedo, me apaixonei pelo mundo da programação e, ao longo dos anos, fui expandindo meus conhecimentos em diversas linguagens, como Python, Java, Go e ADVPL. Trabalho no desenvolvimento de sistemas, automação de rotinas e criação de soluções inovadoras, com foco em APIs, sistemas ERP, integração e mensageria.
 		</p>
 	</section>
-	<section class="flex h-[100vh] bg-gray-300  relative justify-center items-center" id="Skills">
+	<section class="flex h-[60vh] bg-gray-300 relative justify-center items-center" id="Skills">
 		<div class="absolute inset-0 bg-gradient-to-b from-gray-300 via-white to-gray-300 animate-[pulse_3s_ease-in-out_infinite] flex justify-center items-center" id="bg"></div>
-		<h1 class="text-1x1 font-bold text-black absolute top-24 border-4 rounded-none px-15 py-2 "  style="border-image: linear-gradient(to right, #FF3C57, #8E0038) 1;" >
+		<h1 class="text-1x1 font-bold text-black absolute top-12 border-4 rounded-none px-15 py-2" style="border-image: linear-gradient(to right, #FF3C57, #8E0038) 1;">
 			SKILLS
 		</h1>
-			<div class="flex space-x-6 absolute bottom-50 left-0 right-0 mx-auto justify-center">
-				<div class="w-32 h-40 bg-white rounded-lg shadow-lg flex flex-col items-center justify-center p-4 hover:scale-105 transition-transform">
-					<img src="/assets/Go.png" alt="Go" class="w-16 h-16 mb-2">
-				</div>
-				<div class="w-32 h-40 bg-white rounded-lg shadow-lg flex flex-col items-center justify-center p-4 hover:scale-105 transition-transform">
-					<img src="/assets/Tailwind.png" alt="Tailwind" class="w-24 h-24 mb-2">
-				</div>
-				<div class="w-32 h-40 bg-white rounded-lg shadow-lg flex flex-col items-center justify-center p-4 hover:scale-105 transition-transform">
-					<img src="/assets/java.png" alt="Java" class="w-16 h-16 mb-2">
-				</div>
-				<div class="w-32 h-40 bg-white rounded-lg shadow-lg flex flex-col items-center justify-center p-4 hover:scale-105 transition-transform">
-					<img src="/assets/angular_gradient.png" alt="Angular" class="w-16 h-16 mb-2">
-				</div>
-				<div class="w-32 h-40 bg-white rounded-lg shadow-lg flex flex-col items-center justify-center p-4 hover:scale-105 transition-transform">
-					<img src="/assets/ADVPL.png" alt="ADVPL" class="w-16 h-16 mb-2">
-				</div>
+		<div class="relative w-full flex justify-center items-center z-10 mt-20 sm:hidden">
+			<button class="absolute left-0 top-1/2 -translate-y-1/2 bg-white rounded-full shadow p-2 hover:bg-rose-600 hover:text-white transition" (click)="prevSkill()">
+				<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" /></svg>
+			</button>
+			<div class="w-32 h-40 bg-white rounded-lg shadow-lg flex flex-col items-center justify-center p-4 mx-8">
+				<img [src]="skills[currentSkill].src" [alt]="skills[currentSkill].alt" class="w-16 h-16 mb-2" />
+				<span class="font-bold text-lg mt-2">{{ skills[currentSkill].alt }}</span>
 			</div>
+			<button class="absolute right-0 top-1/2 -translate-y-1/2 bg-white rounded-full shadow p-2 hover:bg-rose-600 hover:text-white transition" (click)="nextSkill()">
+				<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+			</button>
+		</div>
 	</section>
 	<section class="bg-gray-200 py-12 shadow-2xl flex flex-col items-center justify-center relative mt-[-80px] z-10" id="Portfolio">
 		<h1 class="text-1xl font-bold text-black border-4 rounded-none px-15 py-2 mb-0"

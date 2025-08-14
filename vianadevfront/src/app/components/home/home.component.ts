@@ -17,6 +17,24 @@ export class HomeComponent {
 
   showAlert: boolean = false;
 
+  // Carrossel de skills
+  skills = [
+    { src: '/assets/Go.png', alt: 'Go' },
+    { src: '/assets/Tailwind.png', alt: 'Tailwind' },
+    { src: '/assets/java.png', alt: 'Java' },
+    { src: '/assets/angular_gradient.png', alt: 'Angular' },
+    { src: '/assets/ADVPL.png', alt: 'ADVPL' }
+  ];
+  currentSkill = 0;
+
+  prevSkill() {
+    this.currentSkill = (this.currentSkill - 1 + this.skills.length) % this.skills.length;
+  }
+
+  nextSkill() {
+    this.currentSkill = (this.currentSkill + 1) % this.skills.length;
+  }
+
   copyEmailToClipboard() {
     navigator.clipboard.writeText(this.email).then(() => {
       this.showAlert = true;
