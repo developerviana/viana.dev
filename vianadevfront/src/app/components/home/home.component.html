@@ -37,8 +37,8 @@
 			</div>
 		</div>
 	</section>
-	<section class="bg-zinc-950 text-white py-5 flex justify-center items-center" >
-		<p class="text-sm text-center max-w-2xl leading-relaxed transition-transform duration-300 hover:scale-105 mx-auto">
+	<section class="bg-zinc-950 text-white py-5 flex justify-center items-center">
+		<p class="text-sm text-center max-w-2xl leading-relaxed transition-transform duration-300 hover:scale-105 mx-auto px-4 sm:px-0">
 			Desenvolvedor brasileiro de 24 anos, apaixonado por tecnologia, design e pela resolução de desafios complexos. Desde cedo, me apaixonei pelo mundo da programação e, ao longo dos anos, fui expandindo meus conhecimentos em diversas linguagens, como Python, Java, Go e ADVPL. Trabalho no desenvolvimento de sistemas, automação de rotinas e criação de soluções inovadoras, com foco em APIs, sistemas ERP, integração e mensageria.
 		</p>
 	</section>
@@ -47,7 +47,8 @@
 		<h1 class="text-1x1 font-bold text-black absolute top-12 border-4 rounded-none px-15 py-2" style="border-image: linear-gradient(to right, #FF3C57, #8E0038) 1;">
 			SKILLS
 		</h1>
-		<div class="relative w-full flex justify-center items-center z-10 mt-20 sm:hidden">
+		<!-- Carrossel para mobile -->
+		<div class="relative w-full flex justify-center items-center z-10 mt-20 mb-16 sm:hidden">
 			<button class="absolute left-0 top-1/2 -translate-y-1/2 bg-white rounded-full shadow p-2 hover:bg-rose-600 hover:text-white transition" (click)="prevSkill()">
 				<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" /></svg>
 			</button>
@@ -58,6 +59,13 @@
 			<button class="absolute right-0 top-1/2 -translate-y-1/2 bg-white rounded-full shadow p-2 hover:bg-rose-600 hover:text-white transition" (click)="nextSkill()">
 				<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
 			</button>
+		</div>
+		<!-- Lista horizontal para desktop/tablet -->
+		<div class="hidden sm:flex w-full justify-center items-center z-10 mt-20 mb-16 space-x-6">
+			<div *ngFor="let skill of skills" class="w-32 h-40 bg-white rounded-lg shadow-lg flex flex-col items-center justify-center p-4 hover:scale-105 transition-transform">
+				<img [src]="skill.src" [alt]="skill.alt" class="w-16 h-16 mb-2" />
+				<span class="font-bold text-lg mt-2">{{ skill.alt }}</span>
+			</div>
 		</div>
 	</section>
 	<section class="bg-gray-200 py-12 shadow-2xl flex flex-col items-center justify-center relative mt-[-80px] z-10" id="Portfolio">
