@@ -2,12 +2,13 @@ import { Component } from '@angular/core';
 import {HeaderComponent} from '../header/header.component';
 import { CommonModule } from '@angular/common';
 import { FooterComponent } from "../footer/footer.component";
+import { RecaptchaModule } from 'ng-recaptcha';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [HeaderComponent,
-    CommonModule, FooterComponent],
+    CommonModule, FooterComponent, RecaptchaModule],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
@@ -16,6 +17,8 @@ export class HomeComponent {
   email: string = 'vianacommerce@gmail.com';
 
   showAlert: boolean = false;
+
+  captchaResponse: string = '';
 
   // Carrossel de skills
   skills = [
@@ -45,4 +48,9 @@ export class HomeComponent {
       console.error('Erro ao copiar:', err);
     });
   }
+
+  onCaptchaResolved(response: string | null) {
+    this.captchaResponse = response ?? '';
+  }
+
 }
