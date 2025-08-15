@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {HeaderComponent} from '../header/header.component';
 import { CommonModule } from '@angular/common';
 import { FooterComponent } from "../footer/footer.component";
 import { RecaptchaModule } from 'ng-recaptcha';
@@ -7,7 +8,8 @@ import { TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, FooterComponent, RecaptchaModule, TranslateModule],
+  imports: [HeaderComponent,
+    CommonModule, FooterComponent, RecaptchaModule, TranslateModule],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })

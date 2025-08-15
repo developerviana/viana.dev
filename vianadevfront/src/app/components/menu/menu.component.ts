@@ -11,11 +11,10 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 })
 export class MenuComponent {
   isDrawerOpen = false;
-  lang: string = 'en';
+  lang: string = 'pt';
 
   constructor(private translate: TranslateService) {
-    this.translate.setDefaultLang('en');
-    this.translate.use('en');
+    this.translate.setDefaultLang(this.lang);
   }
 
   toggleLang() {
