@@ -10,6 +10,11 @@ import { CommonModule } from '@angular/common';
 })
 export class MenuComponent {
   isDrawerOpen = false;
+  lang: string = 'pt';
+
+  toggleLang() {
+    this.lang = this.lang === 'pt' ? 'en' : 'pt';
+  }
 
   scrollToSection(event: Event, id: string) {
     event.preventDefault(); 

@@ -1,0 +1,16 @@
+{
+  "HELLO": "Hello,",
+  "NAME": "Victor Viana",
+  "JOB": "Software Engineer",
+  "ABOUT": "Brazilian developer, 24 years old, passionate about technology, design and solving complex challenges. Since early on, I fell in love with programming and, over the years, I have expanded my knowledge in several languages such as Python, Java, Go and ADVPL. I work on system development, routine automation and creating innovative solutions, focusing on APIs, ERP systems, integration and messaging.",
+  "SKILLS": "SKILLS",
+  "PORTFOLIO": "PORTFOLIO",
+  "CONTACT": "CONTACT",
+  "SEND": "Send",
+  "NAME_LABEL": "Name",
+  "EMAIL_LABEL": "E-mail",
+  "MESSAGE_LABEL": "Message",
+  "NAME_PLACEHOLDER": "Your name",
+  "EMAIL_PLACEHOLDER": "your@email.com",
+  "MESSAGE_PLACEHOLDER": "Type your message..."
+}
