@@ -1,4 +1,10 @@
 {
+  "MENU": {
+    "SOBRE": "About",
+    "SKILLS": "Skills",
+    "PORTFOLIO": "Portfolio",
+    "CONTATO": "Contact"
+  },
   "HELLO": "Hello,",
   "NAME": "Victor Viana",
   "JOB": "Software Engineer",

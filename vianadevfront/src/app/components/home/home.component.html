@@ -1,10 +1,9 @@
-<app-header></app-header>
 <main>
-	<section class="flex flex-col sm:flex-row items-center justify-center h-auto min-h-[60vh] bg-gray-200" alt="Card de Apresentação" id="Sobre">
+	<section class="flex flex-col sm:flex-row items-center justify-center h-auto min-h-[60vh] bg-gray-200" alt="Card de Apresentação" id="About">
 		<div class="w-full sm:w-1/2 bg-gray-200 flex flex-col justify-center items-center py-8">
-		  <p class="text-xl">Olá, <span class="inline-block animate-wave">👋</span></p>
-		  <h1 class="text-5xl font-bold">Victor Viana</h1>
-		  <p class="text-2x1 font-bold text-gray-500 mt-4">Engenheiro de Software</p>
+		<p class="text-xl">{{ 'HELLO' | translate }} <span class="inline-block animate-wave">👋</span></p>
+		<h1 class="text-5xl font-bold">{{ 'NAME' | translate }}</h1>
+		<p class="text-2x1 font-bold text-gray-500 mt-4">{{ 'JOB' | translate }}</p>
 			<div>
 				<div *ngIf="showAlert"
 					class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-rose-600 text-white px-6 py-3 rounded shadow-lg z-50 transition-opacity duration-900 ease-in-out"
@@ -38,15 +37,15 @@
 		</div>
 	</section>
 	<section class="bg-zinc-950 text-white py-5 flex justify-center items-center">
-		<p class="text-sm text-center max-w-2xl leading-relaxed transition-transform duration-300 hover:scale-105 mx-auto px-4 sm:px-0">
-			Desenvolvedor, brasileiro, apaixonado por tecnologia, e pela resolução de desafios complexos. Desde cedo, me apaixonei pelo mundo da programação e ao longo dos anos, fui expandindo meus conhecimentos em diversas linguagens, como Java, Go e ADVPL. Trabalho no desenvolvimento de sistemas, automação de rotinas e criação de soluções inovadoras, com foco em APIs, sistemas ERP, integração e mensageria.
-		</p>
+			<p class="text-sm text-center max-w-2xl leading-relaxed transition-transform duration-300 hover:scale-105 mx-auto px-4 sm:px-0">
+				{{ 'ABOUT' | translate }}
+			</p>
 	</section>
 	<section class="flex h-[60vh] bg-gray-300 relative justify-center items-center" id="Skills">
 		<div class="absolute inset-0 bg-gradient-to-b from-gray-300 via-white to-gray-300 animate-[pulse_3s_ease-in-out_infinite] flex justify-center items-center" id="bg"></div>
-		<h1 class="text-1x1 font-bold text-black absolute top-12 border-4 rounded-none px-15 py-2" style="border-image: linear-gradient(to right, #FF3C57, #8E0038) 1;">
-			SKILLS
-		</h1>
+			<h1 class="text-1x1 font-bold text-black absolute top-12 border-4 rounded-none px-15 py-2" style="border-image: linear-gradient(to right, #FF3C57, #8E0038) 1;">
+				{{ 'SKILLS' | translate }}
+			</h1>
 		<!-- Carrossel para mobile -->
 		<div class="relative w-full flex justify-center items-center z-10 mt-20 mb-16 sm:hidden">
 			<button class="absolute left-0 top-1/2 -translate-y-1/2 bg-white rounded-full shadow p-2 hover:bg-rose-600 hover:text-white transition" (click)="prevSkill()">
@@ -105,23 +104,23 @@
 	<section class="bg-white py-12 flex flex-col items-center justify-center" id="Contato">
 		<h1 class="text-1xl font-bold text-black border-4 rounded-none px-15 py-2 mb-8"
 				style="border-image: linear-gradient(to right, #FF3C57, #8E0038) 1;">
-			CONTATO
+			{{ 'CONTACT' | translate }}
 		</h1>
 		<form class="w-full max-w-lg bg-gray-100 rounded-lg shadow-lg p-8 space-y-6">
 			<div>
-				<label for="nome" class="block text-gray-700 font-semibold mb-2">Nome</label>
-				<input type="text" id="nome" name="nome" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-rose-600" placeholder="Seu nome" required>
+				<label for="nome" class="block text-gray-700 font-semibold mb-2">{{ 'NAME_LABEL' | translate }}</label>
+				<input type="text" id="nome" name="nome" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-rose-600" placeholder="{{ 'NAME_PLACEHOLDER' | translate }}" required>
 			</div>
 			<div>
-				<label for="email" class="block text-gray-700 font-semibold mb-2">E-mail</label>
-				<input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-rose-600" placeholder="seu@email.com" required>
+				<label for="email" class="block text-gray-700 font-semibold mb-2">{{ 'EMAIL_LABEL' | translate }}</label>
+				<input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-rose-600" placeholder="{{ 'EMAIL_PLACEHOLDER' | translate }}" required>
 			</div>
 			<div>
-				<label for="mensagem" class="block text-gray-700 font-semibold mb-2">Mensagem</label>
-				<textarea id="mensagem" name="mensagem" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-rose-600" placeholder="Digite sua mensagem..." required></textarea>
+				<label for="mensagem" class="block text-gray-700 font-semibold mb-2">{{ 'MESSAGE_LABEL' | translate }}</label>
+				<textarea id="mensagem" name="mensagem" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-rose-600" placeholder="{{ 'MESSAGE_PLACEHOLDER' | translate }}" required></textarea>
 			</div>
 			<button type="submit" class="w-full bg-rose-600 text-white font-bold py-3 rounded hover:bg-rose-700 transition-colors">
-				Enviar
+				{{ 'SEND' | translate }}
 			</button>
 			<div class="flex justify-center items-center w-full my-4">
 				<re-captcha (resolved)="onCaptchaResolved($event)" siteKey="6LdtC6crAAAAAHRI_L9mMFEk8shgCts9O1GJpblW"></re-captcha>

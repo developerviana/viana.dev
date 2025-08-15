@@ -1,19 +1,26 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-menu',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.scss',
 })
 export class MenuComponent {
   isDrawerOpen = false;
-  lang: string = 'pt';
+  lang: string = 'en';
+
+  constructor(private translate: TranslateService) {
+    this.translate.setDefaultLang('en');
+    this.translate.use('en');
+  }
 
   toggleLang() {
     this.lang = this.lang === 'pt' ? 'en' : 'pt';
+    this.translate.use(this.lang);
   }
 
   scrollToSection(event: Event, id: string) {

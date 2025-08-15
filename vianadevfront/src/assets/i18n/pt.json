@@ -1,8 +1,14 @@
 {
+  "MENU": {
+    "SOBRE": "Sobre",
+    "SKILLS": "Skills",
+    "PORTFOLIO": "Portfolio",
+    "CONTATO": "Contato"
+  },
   "HELLO": "Olá,",
   "NAME": "Victor Viana",
   "JOB": "Engenheiro de Software",
-  "ABOUT": "Desenvolvedor brasileiro de 24 anos, apaixonado por tecnologia, design e pela resolução de desafios complexos. Desde cedo, me apaixonei pelo mundo da programação e, ao longo dos anos, fui expandindo meus conhecimentos em diversas linguagens, como Python, Java, Go e ADVPL. Trabalho no desenvolvimento de sistemas, automação de rotinas e criação de soluções inovadoras, com foco em APIs, sistemas ERP, integração e mensageria.",
+  "ABOUT": "Desenvolvedor, brasileiro, apaixonado por tecnologia, e pela resolução de desafios complexos. Desde cedo, me apaixonei pelo mundo da programação e ao longo dos anos, fui expandindo meus conhecimentos em diversas linguagens, como Java, Go e ADVPL. Trabalho no desenvolvimento de sistemas, automação de rotinas e criação de soluções inovadoras, com foco em APIs, sistemas ERP, integração e mensageria.",
   "SKILLS": "SKILLS",
   "PORTFOLIO": "PORTFOLIO",
   "CONTACT": "CONTATO",
@@ -12,5 +18,8 @@
   "MESSAGE_LABEL": "Mensagem",
   "NAME_PLACEHOLDER": "Seu nome",
   "EMAIL_PLACEHOLDER": "seu@email.com",
-  "MESSAGE_PLACEHOLDER": "Digite sua mensagem..."
+  "MESSAGE_PLACEHOLDER": "Digite sua mensagem...",
+  "FOOTER": {
+    "COPYRIGHT": "VICTOR VIANA ©"
+  }
 }

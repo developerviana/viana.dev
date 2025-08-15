@@ -9,9 +9,9 @@
   <!-- Menu padrão para desktop/tablet -->
   <div class="hidden md:block text-amber-50 me-10">
     <ul class="flex tracking-wider space-x-24 font-[Montserrat_Alternates] text-sm font-medium">
-      <li><a href="#" class="hover:text-rose-500 transition duration-200" (click)="scrollToSection($event, 'Sobre')">Sobre</a></li>
-      <li><a href="#" class="hover:text-rose-500 transition duration-200" (click)="scrollToSection($event, 'Skills')">Skills</a></li>
-      <li><a href="#" class="hover:text-rose-500 transition duration-200" (click)="scrollToSection($event, 'Portfolio')">Portfólio</a></li>
+  <li><a href="#" class="hover:text-rose-500 transition duration-200" (click)="scrollToSection($event, 'Sobre')">{{ 'MENU.SOBRE' | translate }}</a></li>
+  <li><a href="#" class="hover:text-rose-500 transition duration-200" (click)="scrollToSection($event, 'Skills')">{{ 'MENU.SKILLS' | translate }}</a></li>
+  <li><a href="#" class="hover:text-rose-500 transition duration-200" (click)="scrollToSection($event, 'Portfolio')">{{ 'MENU.PORTFOLIO' | translate }}</a></li>
       <li class="flex items-center space-x-2">
         <a href="#"
           class="hover:text-orange-700 transition duration-300 rounded-[30px] border-[3px] border-transparent"
@@ -19,12 +19,12 @@
           (click)="scrollToSection($event, 'Contato')"
           onmouseover="this.style.backgroundImage='linear-gradient(#000, #000), linear-gradient(to right, #8E0038, #FF3C57)';"
           onmouseout="this.style.backgroundImage='linear-gradient(#000, #000), linear-gradient(to right, #FF3C57, #8E0038)';">
-          Contato
+          {{ 'MENU.CONTATO' | translate }}
         </a>
         <!-- Language Switcher Desktop -->
-        <div class="relative w-14 h-7 flex items-center bg-gray-800 rounded-full cursor-pointer select-none transition-all duration-300 ml-2" (click)="toggleLang()">
-          <span *ngIf="lang !== 'en'" class="absolute left-2 top-1/2 -translate-y-1/2 text-white text-xs transition-all duration-300">EN</span>
-          <span *ngIf="lang !== 'pt'" class="absolute right-2 top-1/2 -translate-y-1/2 text-white text-xs transition-all duration-300">PT</span>
+        <div class="relative w-14 h-7 flex items-center bg-gray-800 rounded-full cursor-pointer select-none transition-all duration-300 ml-2 font-[Montserrat_Alternates]" (click)="toggleLang()">
+          <span *ngIf="lang !== 'en'" class="absolute left-2 top-1/2 -translate-y-1/2 text-white text-xs transition-all duration-300 font-[Montserrat_Alternates]">EN</span>
+          <span *ngIf="lang !== 'pt'" class="absolute right-2 top-1/2 -translate-y-1/2 text-white text-xs transition-all duration-300 font-[Montserrat_Alternates]">PT</span>
           <span
             class="absolute top-1/2 -translate-y-1/2 w-5 h-5 bg-rose-600 rounded-full shadow-lg transition-all duration-300"
             [style.left]="lang === 'en' ? '2px' : 'calc(100% - 22px)'"
@@ -44,9 +44,9 @@
       </svg>
     </button>
     <ul class="flex flex-col space-y-6 font-[Montserrat_Alternates] text-lg font-medium text-amber-50">
-      <li><a href="#" class="hover:text-rose-500 transition duration-200" (click)="scrollToSection($event, 'Sobre'); isDrawerOpen = false">Sobre</a></li>
-      <li><a href="#" class="hover:text-rose-500 transition duration-200" (click)="scrollToSection($event, 'Skills'); isDrawerOpen = false">Skills</a></li>
-      <li><a href="#" class="hover:text-rose-500 transition duration-200" (click)="scrollToSection($event, 'Portfolio'); isDrawerOpen = false">Portfólio</a></li>
+  <li><a href="#" class="hover:text-rose-500 transition duration-200" (click)="scrollToSection($event, 'Sobre'); isDrawerOpen = false">{{ 'MENU.SOBRE' | translate }}</a></li>
+  <li><a href="#" class="hover:text-rose-500 transition duration-200" (click)="scrollToSection($event, 'Skills'); isDrawerOpen = false">{{ 'MENU.SKILLS' | translate }}</a></li>
+  <li><a href="#" class="hover:text-rose-500 transition duration-200" (click)="scrollToSection($event, 'Portfolio'); isDrawerOpen = false">{{ 'MENU.PORTFOLIO' | translate }}</a></li>
       <li class="flex items-center space-x-2">
         <a href="#"
           class="hover:text-orange-700 transition duration-300 rounded-[30px] border-[3px] border-transparent"
@@ -54,12 +54,12 @@
           (click)="scrollToSection($event, 'Contato'); isDrawerOpen = false"
           onmouseover="this.style.backgroundImage='linear-gradient(#000, #000), linear-gradient(to right, #8E0038, #FF3C57)';"
           onmouseout="this.style.backgroundImage='linear-gradient(#000, #000), linear-gradient(to right, #FF3C57, #8E0038)';">
-          Contato
+          {{ 'MENU.CONTATO' | translate }}
         </a>
         <!-- Language Switcher Mobile -->
-        <div class="relative w-14 h-7 flex items-center bg-gray-800 rounded-full cursor-pointer select-none transition-all duration-300 ml-2" (click)="toggleLang()">
-          <span *ngIf="lang !== 'en'" class="absolute left-2 top-1/2 -translate-y-1/2 text-white text-xs transition-all duration-300">EN</span>
-          <span *ngIf="lang !== 'pt'" class="absolute right-2 top-1/2 -translate-y-1/2 text-white text-xs transition-all duration-300">PT</span>
+        <div class="relative w-14 h-7 flex items-center bg-gray-800 rounded-full cursor-pointer select-none transition-all duration-300 ml-2 font-[Montserrat_Alternates]" (click)="toggleLang()">
+          <span *ngIf="lang !== 'en'" class="absolute left-2 top-1/2 -translate-y-1/2 text-white text-xs transition-all duration-300 font-[Montserrat_Alternates]">EN</span>
+          <span *ngIf="lang !== 'pt'" class="absolute right-2 top-1/2 -translate-y-1/2 text-white text-xs transition-all duration-300 font-[Montserrat_Alternates]">PT</span>
           <span
             class="absolute top-1/2 -translate-y-1/2 w-5 h-5 bg-rose-600 rounded-full shadow-lg transition-all duration-300"
             [style.left]="lang === 'en' ? '2px' : 'calc(100% - 22px)'"
