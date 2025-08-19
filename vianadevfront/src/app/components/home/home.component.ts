@@ -85,7 +85,7 @@ export class HomeComponent {
       name: form.value.nome,
       email: form.value.email,
       message: form.value.mensagem,
-      recaptcha: this.captchaResponse
+      token: this.captchaResponse
     };
     fetch('https://viana-devbackend.onrender.com/api/send-email', {
       method: 'POST',
