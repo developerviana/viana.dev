@@ -62,52 +62,35 @@ export class HomeComponent {
       alert('Por favor, resolva o reCAPTCHA antes de enviar.');
       return;
     }
-    // Primeiro valida o reCAPTCHA
-    fetch('https://viana-devbackend.onrender.com/api/verify-recaptcha', {
+    // Envia o email diretamente, o backend já valida o token
+    const payload = {
+      name: form.value.nome,
+      email: form.value.email,
+      message: form.value.mensagem,
+      token: this.captchaResponse
+    };
+    fetch('https://viana-devbackend.onrender.com/api/send-email', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ token: this.captchaResponse })
+      body: JSON.stringify(payload)
     })
     .then(res => res.json())
     .then(data => {
       if (data.success) {
-        // Se o reCAPTCHA for válido, envia o email
-        const payload = {
-          name: form.value.nome,
-          email: form.value.email,
-          message: form.value.mensagem
-        };
-        fetch('https://viana-devbackend.onrender.com/api/send-email', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(payload)
-        })
-        .then(res => res.json())
-        .then(data => {
-          if (data.success) {
-            this.showEmailSuccess = true;
-            setTimeout(() => {
-              this.showEmailSuccess = false;
-            }, 2500);
-            form.reset();
-            this.captchaResponse = '';
-          } else {
-            alert('Erro ao enviar mensagem.');
-          }
-        })
-        .catch(() => {
-          alert('Erro ao enviar mensagem.');
-        });
+        this.showEmailSuccess = true;
+        setTimeout(() => {
+          this.showEmailSuccess = false;
+        }, 2500);
+        form.reset();
+        this.captchaResponse = '';
       } else {
-        alert('reCAPTCHA inválido. Tente novamente.');
+        alert('Erro ao enviar mensagem.');
       }
     })
     .catch(() => {
-      alert('Erro ao validar reCAPTCHA.');
+      alert('Erro ao enviar mensagem.');
     });
   }
 
