@@ -59,14 +59,14 @@ export class HomeComponent {
   }
 
   onSubmitEmail(form: any) {
-    if (!form.value.nome || !form.value.email || !form.value.mensagem) {
+    if (!this.formNome || !this.formEmail || !this.formMensagem) {
       alert('Preencha todos os campos antes de enviar.');
       return;
     }
     const payload = {
-      name: form.value.nome,
-      email: form.value.email,
-      message: form.value.mensagem
+      name: this.formNome,
+      email: this.formEmail,
+      message: this.formMensagem
     };
     console.log('Payload enviado:', payload);
     fetch('https://viana-devbackend.onrender.com/api/send-email', {
@@ -85,6 +85,9 @@ export class HomeComponent {
         }, 2500);
         form.reset();
         this.captchaResponse = '';
+        this.formNome = '';
+        this.formEmail = '';
+        this.formMensagem = '';
       } else {
         alert('Erro ao enviar mensagem.');
       }
