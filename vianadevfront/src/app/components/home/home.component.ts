@@ -15,6 +15,9 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+  formNome: string = '';
+  formEmail: string = '';
+  formMensagem: string = '';
 
   email: string = 'vianacommerce@gmail.com';
 
@@ -23,7 +26,6 @@ export class HomeComponent {
 
   captchaResponse: string = '';
 
-  // Carrossel de skills
   skills = [
     { src: '/assets/Go.png', alt: 'Go' },
     { src: '/assets/Tailwind.png', alt: 'Tailwind' },
