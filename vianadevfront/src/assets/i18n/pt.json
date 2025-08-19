@@ -21,5 +21,20 @@
   "MESSAGE_PLACEHOLDER": "Digite sua mensagem...",
   "FOOTER": {
     "COPYRIGHT": "VICTOR VIANA ©"
+  },
+  "PROJECTS": {
+    "REQUESTSAPI": {
+      "TITLE": "RequestsAPI",
+      "DESCRIPTION": "Este projeto é um microserviço construído com Java (Spring Boot) que realiza o consumo de mensagens da fila do RabbitMQ, armazena os dados recebidos em um banco de dados PostgreSQL e disponibiliza uma API RESTful para consulta de informações."
+    },
+    "MVC": {
+      "TITLE": "MVC + Importação de Dados",
+      "DESCRIPTION": "Modelo MVC e Importação de planilha de dados no formato CSV utilizando ADVPL."
+    },
+    "PAYFLOW": {
+      "TITLE": "payflow-api",
+      "DESCRIPTION": "É uma API RESTful desenvolvida em Go. O projeto simula uma plataforma de pagamentos simplificada, permitindo transferências financeiras entre usuários com regras específicas de negócio."
+    },
+    "GITHUB": "Ver no GitHub"
   }
 }

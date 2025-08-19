@@ -12,25 +12,27 @@
   <li><a href="#" class="hover:text-rose-500 transition duration-200" (click)="scrollToSection($event, 'Sobre')">{{ 'MENU.SOBRE' | translate }}</a></li>
   <li><a href="#" class="hover:text-rose-500 transition duration-200" (click)="scrollToSection($event, 'Skills')">{{ 'MENU.SKILLS' | translate }}</a></li>
   <li><a href="#" class="hover:text-rose-500 transition duration-200" (click)="scrollToSection($event, 'Portfolio')">{{ 'MENU.PORTFOLIO' | translate }}</a></li>
-      <li class="flex items-center space-x-2">
-        <a href="#"
-          class="hover:text-orange-700 transition duration-300 rounded-[30px] border-[3px] border-transparent"
-          style="background-image: linear-gradient(#000, #000), linear-gradient(to right, #FF3C57, #8E0038); background-clip: padding-box, border-box; background-origin: padding-box, border-box; padding: 1.5px 15px; transition: background-image 2ms ease;"
-          (click)="scrollToSection($event, 'Contato')"
-          onmouseover="this.style.backgroundImage='linear-gradient(#000, #000), linear-gradient(to right, #8E0038, #FF3C57)';"
-          onmouseout="this.style.backgroundImage='linear-gradient(#000, #000), linear-gradient(to right, #FF3C57, #8E0038)';">
-          {{ 'MENU.CONTATO' | translate }}
-        </a>
-        <!-- Language Switcher Desktop -->
-        <div class="relative w-14 h-7 flex items-center bg-gray-800 rounded-full cursor-pointer select-none transition-all duration-300 ml-2 font-[Montserrat_Alternates]" (click)="toggleLang()">
-          <span *ngIf="lang !== 'en'" class="absolute left-2 top-1/2 -translate-y-1/2 text-white text-xs transition-all duration-300 font-[Montserrat_Alternates]">EN</span>
-          <span *ngIf="lang !== 'pt'" class="absolute right-2 top-1/2 -translate-y-1/2 text-white text-xs transition-all duration-300 font-[Montserrat_Alternates]">PT</span>
-          <span
-            class="absolute top-1/2 -translate-y-1/2 w-5 h-5 bg-rose-600 rounded-full shadow-lg transition-all duration-300"
-            [style.left]="lang === 'en' ? '2px' : 'calc(100% - 22px)'"
-          ></span>
-        </div>
-      </li>
+  <li>
+    <a href="#"
+      class="hover:text-orange-700 transition duration-300 rounded-[30px] border-[3px] border-transparent flex items-center justify-center"
+      style="background-image: linear-gradient(#000, #000), linear-gradient(to right, #FF3C57, #8E0038); background-clip: padding-box, border-box; background-origin: padding-box, border-box; padding: 1.5px 15px; transition: background-image 2ms ease;"
+      (click)="scrollToSection($event, 'Contato')"
+      onmouseover="this.style.backgroundImage='linear-gradient(#000, #000), linear-gradient(to right, #8E0038, #FF3C57)';"
+      onmouseout="this.style.backgroundImage='linear-gradient(#000, #000), linear-gradient(to right, #FF3C57, #8E0038)';">
+      {{ 'MENU.CONTATO' | translate }}
+    </a>
+  </li>
+  <li>
+    <!-- Language Switcher Desktop -->
+    <div class="relative w-14 h-7 flex items-center bg-gray-800 rounded-full cursor-pointer select-none transition-all duration-300 font-[Montserrat_Alternates] mx-auto" (click)="toggleLang()">
+  <span *ngIf="lang !== 'en'" class="absolute left-2 top-1/2 -translate-y-1/2 text-white text-xs transition-all duration-300 font-semibold tracking-wider font-[Montserrat_Alternates]">EN</span>
+  <span *ngIf="lang !== 'pt'" class="absolute right-2 top-1/2 -translate-y-1/2 text-white text-xs transition-all duration-300 font-semibold tracking-wider font-[Montserrat_Alternates]">PT</span>
+      <span
+        class="absolute top-1/2 -translate-y-1/2 w-5 h-5 bg-rose-600 rounded-full shadow-lg transition-all duration-300"
+        [style.left]="lang === 'en' ? '2px' : 'calc(100% - 22px)'"
+      ></span>
+    </div>
+  </li>
     </ul>
   </div>
 </div>

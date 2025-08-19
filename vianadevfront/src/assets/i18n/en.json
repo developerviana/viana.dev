@@ -18,5 +18,20 @@
   "MESSAGE_LABEL": "Message",
   "NAME_PLACEHOLDER": "Your name",
   "EMAIL_PLACEHOLDER": "your@email.com",
-  "MESSAGE_PLACEHOLDER": "Type your message..."
+  "MESSAGE_PLACEHOLDER": "Type your message...",
+  "PROJECTS": {
+    "REQUESTSAPI": {
+      "TITLE": "RequestsAPI",
+      "DESCRIPTION": "This project is a microservice built with Java (Spring Boot) that consumes messages from a RabbitMQ queue, stores the received data in a PostgreSQL database, and provides a RESTful API for querying information."
+    },
+    "MVC": {
+      "TITLE": "MVC + Data Import",
+      "DESCRIPTION": "MVC model and data import from CSV spreadsheet using ADVPL."
+    },
+    "PAYFLOW": {
+      "TITLE": "payflow-api",
+      "DESCRIPTION": "A RESTful API developed in Go. The project simulates a simplified payment platform, allowing financial transfers between users with specific business rules."
+    },
+    "GITHUB": "View on GitHub"
+  }
 }
