@@ -54,20 +54,19 @@ export class HomeComponent {
 
   onCaptchaResolved(response: string | null) {
     this.captchaResponse = response ?? '';
-    // Remover chamada automática para o backend aqui
   }
 
   onSubmitEmail(form: any) {
-    if (!this.captchaResponse) {
-      alert('Por favor, resolva o reCAPTCHA antes de enviar.');
+    if (!form.value.nome || !form.value.email || !form.value.mensagem) {
+      alert('Preencha todos os campos antes de enviar.');
       return;
     }
-    // Envia o email diretamente, o backend já valida o token
     const payload = {
       name: form.value.nome,
       email: form.value.email,
       message: form.value.mensagem
     };
+    console.log('Payload enviado:', payload);
     fetch('https://viana-devbackend.onrender.com/api/send-email', {
       method: 'POST',
       headers: {
