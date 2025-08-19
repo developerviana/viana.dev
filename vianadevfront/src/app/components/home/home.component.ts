@@ -54,26 +54,7 @@ export class HomeComponent {
 
   onCaptchaResolved(response: string | null) {
     this.captchaResponse = response ?? '';
-    // Envia o token para o backend para validação
-    if (response) {
-      fetch('https://viana-devbackend.onrender.com/api/verify-recaptcha', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ token: response })
-      })
-      .then(res => res.json())
-      .then(data => {
-        if (data.success) {
-        } else {
-          alert('reCAPTCHA inválido. Tente novamente.');
-        }
-      })
-      .catch(() => {
-        alert('Erro ao validar reCAPTCHA.');
-      });
-    }
+    // Remover chamada automática para o backend aqui
   }
 
   onSubmitEmail(form: any) {
