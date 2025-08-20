@@ -34,5 +34,6 @@
       "DESCRIPTION": "A RESTful API developed in Go. The project simulates a simplified payment platform, allowing financial transfers between users with specific business rules."
     },
     "GITHUB": "View on GitHub"
-  }
+  },
+  "EMAIL_SUCCESS": "✅ Email sent successfully!"
 }
