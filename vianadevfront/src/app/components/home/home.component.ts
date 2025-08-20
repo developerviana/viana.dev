@@ -80,7 +80,7 @@ export class HomeComponent {
     })
     .then(res => res.json())
     .then(data => {
-      if (data.success) {
+  if (data.success || data.ok) {
         this.showEmailSuccess = true;
         setTimeout(() => {
           this.showEmailSuccess = false;
