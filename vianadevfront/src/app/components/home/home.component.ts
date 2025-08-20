@@ -80,7 +80,7 @@ export class HomeComponent {
     })
     .then(res => res.json())
     .then(data => {
-  if (data.success || data.ok) {
+  if (data.success || data.ok || (typeof data.message === 'string' && data.message.toLowerCase().includes('sucesso'))) {
         this.showEmailSuccess = true;
         setTimeout(() => {
           this.showEmailSuccess = false;
