@@ -79,13 +79,22 @@ export class HomeComponent {
       body: JSON.stringify(payload)
     })
     .then(async res => {
-      const data = await res.json();
-      if (
-        res.status === 200 ||
-        data.success ||
-        data.ok ||
-        (typeof data.message === 'string' && data.message.toLowerCase().includes('sucesso'))
-      ) {
+      let isSuccess = false;
+      if (res.status === 200) {
+        isSuccess = true;
+      } else {
+        try {
+          const data = await res.json();
+          if (
+            data.success ||
+            data.ok ||
+            (typeof data.message === 'string' && data.message.toLowerCase().includes('sucesso'))
+          ) {
+            isSuccess = true;
+          }
+        } catch {}
+      }
+      if (isSuccess) {
         this.showEmailSuccess = true;
         setTimeout(() => {
           this.showEmailSuccess = false;
