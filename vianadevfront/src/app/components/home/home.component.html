@@ -128,8 +128,8 @@
 			[class]="'w-full bg-rose-600 text-white font-bold py-3 rounded hover:bg-rose-700 transition-colors ' + ((captchaResponse && !isSending) ? 'cursor-pointer' : 'cursor-not-allowed')"
 			[disabled]="!captchaResponse || isSending"
 		>
-			<span *ngIf="isSending">Enviando...</span>
-			<span *ngIf="!isSending">{{ 'SEND' | translate }}</span>
+				<span *ngIf="isSending">{{ 'SEND_LOADING' | translate }}</span>
+				<span *ngIf="!isSending">{{ 'SEND' | translate }}</span>
 		</button>
 			<div class="flex justify-center items-center w-full my-4">
 				<re-captcha (resolved)="onCaptchaResolved($event)" siteKey="6LdtC6crAAAAAHRI_L9mMFEk8shgCts9O1GJpblW"></re-captcha>
