@@ -78,9 +78,14 @@ export class HomeComponent {
       },
       body: JSON.stringify(payload)
     })
-    .then(res => res.json())
-    .then(data => {
-  if (data.success || data.ok || (typeof data.message === 'string' && data.message.toLowerCase().includes('sucesso'))) {
+    .then(async res => {
+      const data = await res.json();
+      if (
+        res.status === 200 ||
+        data.success ||
+        data.ok ||
+        (typeof data.message === 'string' && data.message.toLowerCase().includes('sucesso'))
+      ) {
         this.showEmailSuccess = true;
         setTimeout(() => {
           this.showEmailSuccess = false;
