@@ -13,7 +13,7 @@
   "PORTFOLIO": "PORTFOLIO",
   "CONTACT": "CONTACT",
   "SEND": "Send",
-  "SEND_LOADING": "Sending...",
+  "SEND_LOADING": "Please wait...",
   "NAME_LABEL": "Name",
   "EMAIL_LABEL": "E-mail",
   "MESSAGE_LABEL": "Message",
