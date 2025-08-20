@@ -15,6 +15,7 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+  isSending: boolean = false;
   formNome: string = '';
   formEmail: string = '';
   formMensagem: string = '';
@@ -59,16 +60,17 @@ export class HomeComponent {
   }
 
   onSubmitEmail(form: any) {
+    if (this.isSending) return;
     if (!this.formNome || !this.formEmail || !this.formMensagem) {
       alert('Preencha todos os campos antes de enviar.');
       return;
     }
+    this.isSending = true;
     const payload = {
       name: this.formNome,
       email: this.formEmail,
       message: this.formMensagem
     };
-    console.log('Payload enviado:', payload);
     fetch('https://viana-devbackend.onrender.com/api/send-email', {
       method: 'POST',
       headers: {
@@ -91,9 +93,11 @@ export class HomeComponent {
       } else {
         alert('Erro ao enviar mensagem.');
       }
+      this.isSending = false;
     })
     .catch(() => {
       alert('Erro ao enviar mensagem.');
+      this.isSending = false;
     });
   }
 
